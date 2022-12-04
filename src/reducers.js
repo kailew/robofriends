@@ -1,4 +1,3 @@
-import finalPropsSelectorFactory from "react-redux/es/connect/selectorFactory.js";
 import { 
     CHANGE_SEARCH_FIELD,
     REQUEST_ROBOTS_PENDING,
@@ -19,11 +18,10 @@ export const searchRobots = (state=intialStateSearch, action={}) => {
     }
 }
 
-const intialStateRobots = {
-    isPending: finalPropsSelectorFactory,
+const initialStateRobots = {
     robots: [],
-    error: ''
-}
+    isPending: true
+  }
 
 export const requestRobots = (state=intialStateRobots, action={}) => {
     switch(action.type) {
